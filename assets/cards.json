@@ -1,0 +1,14 @@
+{
+    "cards": [
+        {
+            "Ancient Wizard": {
+                "cardType": "Creature",
+                "colorType": "BluePlains",
+                "cost": 1,
+                "bodyText": "FLOOP >>> ...",
+                "tags": []
+            }
+        }
+    ],
+    "meta": {}
+}
