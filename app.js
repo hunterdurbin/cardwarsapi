@@ -1,6 +1,16 @@
-const express = require('express');
-const app = express();
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
+import express from 'express';
+import dotenv from 'dotenv';
+import { routes } from './routes/index.js';
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+const app = express();
+dotenv.config();
+
+// routes
+app.use('/', routes);
+
+// start the server
+app.listen(process.env.BACK_PORT, () => {
+    console.log(
+        `server running : http://${process.env.BACK_HOST}:${process.env.BACK_PORT}`
+    );
+});
